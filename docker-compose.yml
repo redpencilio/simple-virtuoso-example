@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  virtuoso:
+    image: redpencil/virtuoso
+    volumes:
+      - ./data/db:/data
+      - ./config/virtuoso.ini:/data/virtuoso.ini
+    environment:
+      SPARQL_UPDATE: "true"
+    ports:
+      - 8890:8890
+  yasgui:
+    image: erikap/yasgui
+    ports:
+      - 8891:80
+    environment:
+      ENABLE_ENDPOINT_SELECTOR: "true"
+      DEFAULT_SPARQL_ENDPOINT: "http://localhost:8890/sparql"
