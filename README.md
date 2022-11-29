@@ -1,6 +1,15 @@
 # simple virtuoso example
 This repository holds a very basic example of a configured redpencil/virtuoso docker image in combination with a yasgui interface.
 
+## Getting started
+```bash
+git clone https://github.com/redpencilio/simple-virtuoso-example.git
+cd simple-virtuoso-example
+docker-compose up -d
+```
+
+You can now access Conductor on http://localhost:8890/conductor (username & password = `dba`), as well as Yasgui on http://localhost:8890/sparql.
+
 # license (MIT)
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
